@@ -3,5 +3,4 @@
     yum:
       pkg: "rsyslog"
       state: present
-    retry: 3
     notify: Restart rsyslog
