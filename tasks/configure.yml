@@ -2,10 +2,10 @@
   - name: Rsyslog Client Configuration
     template:
       src: rsyslog.snippet.conf.j2
-      dest: "/etc/rsyslog.d/{{bit_syslog_server}}.conf"
+      dest: "/etc/rsyslog.d/{{ rsyslog_server }}.conf"
       owner: root
       group: root
       mode: 0644
-    when: ansible_fqdn != bit_syslog_server
+    when: ansible_fqdn != rsyslog_server
     notify:
       - Restart rsyslog
