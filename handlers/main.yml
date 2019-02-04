@@ -1,0 +1,16 @@
+---
+- name: Restart rsyslog
+  tags:
+    - rsyslog
+    - configuration
+  service:
+    name: rsyslog
+    state: restarted
+
+- name: Reload rsyslog
+  tags:
+    - rsyslog
+    - configuration
+  service:
+    name: rsyslog
+    state: reloaded

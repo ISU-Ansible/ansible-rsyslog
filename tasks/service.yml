@@ -1,0 +1,6 @@
+---
+  - name: Enable Rsyslog
+    tags:
+      - rsyslog
+      - enable
+    service: name=rsyslog state=started enabled=yes

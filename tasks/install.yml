@@ -1,0 +1,6 @@
+---
+  - name: Install Rsyslog Client
+    yum:
+      pkg: "rsyslog"
+      state: present
+    notify: Restart rsyslog
